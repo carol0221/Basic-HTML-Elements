@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Basic HTML Elements</title>
+</head>
+    <nav>
+        <ul>
+            <li>
+                <a href="#Headings">Headings</a>
+            </li>
+            <li>
+                <a href="#Paragraph">Paragraph</a>
+            </li>
+            <li>
+                <a href="#Unordered List">Unordered List</a>
+            </li>
+            <li>
+                <a href="#Ordered List">Ordered List</a>
+            </li>
+            <li>
+                <a href="#Table">Table</a>
+            </li>
+            <li>
+                <a href="#Form">Form</a>
+            </li>
+            <li>
+            <a href="#Div">Div</a>
+        </li>
+            <li>
+                <a href="Image">Image</a>
+            </li>
+            <li>
+                <a href="Canvas">Canvas</a>
+            </li>
+            <li>
+                <a href="Video">Video</a>
+            </li>
+            <li>
+                <a href="Youtube">Youtube</a>
+            </li>
+            <li>
+                <a href="Drag and Drop">Drag and Drop</a>
+            </li>
+        </ul>
+      </nav>
+<body>
+
+<h1>This is Heading 1</h1>
+
+<h2>This is Heading 2</h2>
+
+<h3>This is Heading 3</h3>
+
+<h4>This is Heading 4</h4>
+
+<h5>This is Heading 5</h5>
+
+<h6>This is Heading 6</h6>
+
+<p>This tag is used to define a paragraph, which is a block-level element that separates text into distinct sections.</p>
+
+<h2>Unordered List</h2>
+
+<ul>
+  <li>Green</li>
+  <li>Red</li>
+  <li>Blue</li>
+  <li>Pink</li>
+</ul>
+
+<h2>Ordered List</h2>
+
+<ol>
+   <li>Purple</li>
+   <li>Yellow</li>
+   <li>Orange</li>
+   <li>Black</li>
+</ol>
+
+<h2>Tables</h2>
+<style>
+table, th, td {
+     border:1px solid black;
+}
+</style>
+<table style="width:100%">
+
+<tr>
+   <th>Name</th>
+   <th>Age</th>
+   <th>Gender</th>
+</tr>
+
+<tr>
+   <td>Jinelyn</td>
+   <td>22</td>
+   <td>Female</td>
+</tr>
+
+<tr>
+   <td>Carol</td>
+   <td>19</td>
+   <td>Female</td>
+</tr>
+
+<tr>
+   <td>Mhar Jhay</td>
+   <td>21</td>
+   <td>Male</td>
+</tr>
+</table>
+
+<h2>Forms</h2>
+<form action="/action_page.php">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="Carol"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Engo"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+<h2>Div</h2>
+<div>
+<style>
+div {
+    width: 300px;
+    margin: auto;
+    background-color: #FFF4A3;
+}
+</style>
+        <h2>Activity 43: Research HTML</h2>
+ <p>Basic Elements of HTML.</p>
+</div>
+
+<h2>Image</h2>
+<a href="Blank">url-link of image</a>
+<image src="url-link of image" alt="image"  style="width:128px;height:128px;">
+
+    <h2>Canvas</h2>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+    </canvas>
+
+    <h2>Video</h2>
+    <video width="320" height="240" controls>
+        <source src="tiktok chanyeol.mp4" type="video/mp4">
+    </video>
+
+<h2>Youtube</h2>
+<iframe width="400" height="200"
+src="https://www.youtube.com/embed/Hv8UZn1NLYA">
+</iframe>
+
+<h2>Drag and Drop</h2>
+<style>
+    #div1 {
+      width: 350px;
+      height: 70px;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+    }
+    </style>
+    <script>
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+    
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+    
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+    }
+    </script>
+    </head>
+    <body>
+        
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <br>
+    <img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
+    
+</body>
+</html>
